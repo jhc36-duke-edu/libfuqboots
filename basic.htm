@@ -169,9 +169,40 @@
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><p>I am the Home tab!</p></div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><p>Profile tab reporting for duty!</p></div>
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><p>You have contacted the Contact tab!</p></div>
+                    <div class="tab-pane fade show active" id="catalog" role="tabpanel" aria-labelledby="catalog-tab">
+                        <form action="https://search.library.duke.edu/search" method="get" name="scope">
+                            <!-- text input -->
+                            <input style="margin:20px 0 15px 0;" name="Ntt" type="text" onfocus="this.value='';" value="...find books, journals, databases &amp; more" size="40" class="srch" aria-label="enter catalog search terms">
+
+                            <input class="srch" alt="Enter a search term and click on 'Search' to get results" name="Search" title="Search" value="Search" type="submit" aria-label="search button">
+
+                            <fieldset class="srch">
+                                <label for="searchtype1" style="display:block">
+                                <input type="radio" name="Ntk" value="Title" checked="checked" aria-label="search by title">
+                                <span>By Title Words</span>
+                                </label>
+                                <label for="searchtype2" style="display:block">
+                                <input type="radio" name="Ntk" value="Keyword" aria-label="search by keyword">
+                                <span>By Keyword Anywhere</span>
+                                </label>
+                                <label for="searchtype3" style="display:block">
+                                <input type="radio" name="Ntk" value="Subject" aria-label="search by subject">
+                                <span>By Subject Word</span>
+                                </label>
+                            </fieldset>
+                        </form>
+                        <p>
+                            <a href="http://search.library.duke.edu/#tab2">Advanced Search</a> |
+                            <a href="https://library.duke.edu/librarycatalog/login/?next=/librarycatalog/account/">Catalog Login</a> |
+                            <a href="http://catalog.library.duke.edu/">Classic Catalog</a>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <p>Profile tab reporting for duty!</p>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <p>You have contacted the Contact tab!</p>
+                    </div>
                 </div>
             </div>
         </div> <!-- end bs-wrap -->
